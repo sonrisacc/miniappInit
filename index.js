@@ -32,6 +32,9 @@ const collectDrops = input => {
     if (input[i] < minWall) {
       // if not between the same wall
       if (result[0] !== leftIndex || result[1] !== rightIndex) {
+        // if cur water is not larger then result, leave
+        if (minWall - input[i] < result[2]) break;
+        // only update result when cur water > result
         result[0] = leftIndex;
         result[1] = rightIndex;
         result[2] = minWall - input[i];
@@ -41,7 +44,13 @@ const collectDrops = input => {
       }
     }
   }
+  // if no water
+  if (result.length === 0) return [0, 0, 0];
 
-  return result.length === 0 ? [0, 0, 0] : result;
+  // refine wall index
+  result[0] += 1;
+  result[1] += 1;
+  return result;
 };
+
 module.exports = collectDrops;

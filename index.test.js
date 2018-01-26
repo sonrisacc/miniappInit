@@ -21,9 +21,13 @@ test('shoud collectDrops return [0,0,0] when no wall', () => {
 });
 
 test('shoud collectDrops return coorrect amount of water', () => {
-  expect(collectDrops([3, 1, 3])).toEqual([0, 2, 2]);
+  expect(collectDrops([3, 1, 3])).toEqual([1, 3, 2]);
 });
 
 test('shoud collectDrops return coorrect amount of water when walls are same height', () => {
-  expect(collectDrops([3, 2, 3, 1, 1, 1, 3])).toEqual([2, 6, 6]);
+  expect(collectDrops([3, 2, 3, 1, 1, 1, 3])).toEqual([3, 7, 6]);
+});
+
+test('shoud collectDrops return coorrect amount of water when walls are same height', () => {
+  expect(collectDrops([5, 3, 7, 2, 6, 4, 5, 9, 1, 2])).toEqual([3, 8, 11]);
 });
