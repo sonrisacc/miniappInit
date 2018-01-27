@@ -16,7 +16,13 @@
     "url": "https://github.com/sonrisacc/waterFall/issues"
   },
   "homepage": "https://github.com/sonrisacc/waterFall#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  },
   "devDependencies": {
-    "jest": "^22.1.4"
+    "jest": "^22.1.4",
+    "nodemon": "^1.14.11",
+    "webpack": "^3.10.0"
   }
 }
