@@ -2,10 +2,7 @@ function findMax(start, end, inputArr) {
   let tempMaxIndex = -Infinity;
 
   for (let i = start; i < end; i++) {
-    if (
-      inputArr[i] >= inputArr[tempMaxIndex] ||
-      inputArr[tempMaxIndex] === undefined
-    ) {
+    if (inputArr[i] >= inputArr[tempMaxIndex] || inputArr[tempMaxIndex] === undefined) {
       tempMaxIndex = i;
     }
   }
@@ -17,16 +14,16 @@ const collectDrops = input => {
   if (!Array.isArray(input)) return 'not valid input';
   if (input.length <= 1) return [0, 0, 0];
 
-  let result = [];
+  const result = [];
   for (let i = 0; i < input.length; i++) {
     // find leftMax & right Max
-    let leftIndex = findMax(0, i, input);
-    let rightIndex = findMax(i + 1, input.length, input);
+    const leftIndex = findMax(0, i, input);
+    const rightIndex = findMax(i + 1, input.length, input);
     // find minWall
-    let leftVal = input[leftIndex];
-    let rightVal = input[rightIndex];
+    const leftVal = input[leftIndex];
+    const rightVal = input[rightIndex];
 
-    let minWall = Math.min(leftVal, rightVal);
+    const minWall = Math.min(leftVal, rightVal);
 
     // find a drop
     if (input[i] < minWall) {
