@@ -5,11 +5,6 @@
 .LSOverride
 
 # config files #
-.eslintrc.json
-.eslintignore
-.editorconfig
-.babelrc
-.prettierignore
 
 # Logs
 logs
