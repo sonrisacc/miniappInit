@@ -1,7 +1,36 @@
 # waterFall
 
-We are going to represent a series of walls of different integer heights.
-Your goal is to determine which two walls have the most water trapped between them, and exactly how much water that is.
+## Initial Setup
+
+1. Fork and clone the repo
+2. Install dependencies from the root of the repo by running
+
+```sh
+npm install
+```
+
+3. Start charSortII in dev mode by running:
+
+```sh
+npm run build
+npm run dev
+```
+
+or Start charSortII by running:
+
+```sh
+npm start
+```
+
+4. Run test by running:
+
+```sh
+npm test
+```
+
+> **NOTE**
+> We are going to represent a series of walls of different integer heights.
+> Your goal is to determine which two walls have the most water trapped between them, and exactly how much water that is.
 
 // no constraints
 // time complexity: linear, since we are iterate through every element
